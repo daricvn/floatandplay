@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="2" y="6" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
+      <polygon points="9,10 9,16 16,13" fill="currentColor"/>
+    </svg>
+    <span class="logo-text">FloatPiP</span>
+  </header>
+
+  <section class="section companion-section">
+    <label class="toggle-row" for="companion-toggle">
+      <span class="toggle-label">
+        Enable companion PiP
+        <span class="help-wrap">
+          <button class="help-btn" type="button" aria-label="What is companion PiP?" tabindex="0">?</button>
+          <span class="help-tip" role="tooltip">
+            Sends video to the <strong>FloatPiP desktop app</strong> instead of the browser's built-in Picture-in-Picture.
+            Requires FloatPiP to be installed and running on your computer.
+          </span>
+        </span>
+      </span>
+      <span class="toggle" aria-hidden="true">
+        <input type="checkbox" id="companion-toggle">
+        <span class="slider"></span>
+      </span>
+    </label>
+  </section>
+
+  <section class="section tabs-section">
+    <div class="section-title">Video tabs</div>
+    <ul id="tab-list" class="tab-list">
+      <li class="tab-loading">
+        <span class="spinner"></span>
+        Detecting video tabs…
+      </li>
+    </ul>
+  </section>
+
+  <div id="drm-toast" class="drm-toast" aria-live="polite"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

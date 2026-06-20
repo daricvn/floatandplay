@@ -1,0 +1,44 @@
+{
+  "productName": "FloatPiP",
+  "version": "0.1.0",
+  "identifier": "com.floatpip.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "FloatPiP",
+        "width": 480,
+        "height": 270,
+        "transparent": true,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "shadow": false,
+        "resizable": true,
+        "minWidth": 240,
+        "minHeight": 135
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": ["icons/icon.ico"],
+    "externalBin": ["binaries/yt-dlp"]
+  },
+  "plugins": {
+    "deep-link": {
+      "desktop": [
+        { "schemes": ["floatpip"] }
+      ]
+    }
+  }
+}
